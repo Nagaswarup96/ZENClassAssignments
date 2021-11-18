@@ -4,19 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Random</title>
   </head>
-  <body>
-    <div style="display: inline-block">
-      <h2 id="val1"></h2>
+  <body onload="loader()">
+    <div id="mainDiv">
+      <div style="display: inline-block">
+        <h2 id="val1"></h2>
+      </div>
+      +
+      <div style="display: inline-block">
+        <h2 id="val2"></h2>
+      </div>
+      =
+      <input type="number" name="sum" id="sum" />
+      <button onclick="handleClick()">CHECK</button>
     </div>
-    +
-    <div style="display: inline-block">
-      <h2 id="val2"></h2>
-    </div>
-    =
-    <input type="number" name="sum" id="sum" />
-    <button onclick="handleClick()">CHECK</button>
     <script src="index.js"></script>
   </body>
 </html>

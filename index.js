@@ -1,8 +1,10 @@
 const val1 = document.getElementById("val1");
 const val2 = document.getElementById("val2");
 
-val1.innerText = Math.floor(Math.random() * 49) + 1;
-val2.innerText = Math.floor(Math.random() * 49) + 1;
+function loader() {
+  val1.innerText = Math.floor(Math.random() * 49) + 1;
+  val2.innerText = Math.floor(Math.random() * 49) + 1;
+}
 
 const handleClick = () => {
   const val = document.getElementById("sum").value;
@@ -12,4 +14,6 @@ const handleClick = () => {
   } else {
     alert(`sorry, Wrong Answer. Correct Answer is ${sum}`);
   }
+  document.getElementById("sum").value = "";
+  loader();
 };
