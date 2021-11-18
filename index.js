@@ -35,3 +35,10 @@ function deleteLi() {
   localStorage.removeItem("data");
   location.reload();
 }
+
+function keyPress(event) {
+  let key = event.keyCode;
+  if (key === 13) {
+    handleClick();
+  }
+}
