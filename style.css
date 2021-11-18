@@ -1,0 +1,11 @@
+body {
+  background: linear-gradient(90deg, rgb(16, 77, 102), rgb(0, 144, 201));
+}
+
+input {
+  /* background: transparent !important; */
+}
+
+input::placeholder {
+  color: rgb(153, 152, 152) !important;
+}
