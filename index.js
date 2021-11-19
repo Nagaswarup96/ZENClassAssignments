@@ -4,7 +4,7 @@ var toDos = [];
 function loader() {
   toDos = [...localStorage.data.split(",")];
 
-  if (toDos !== 0) {
+  if (toDos.length !== 0) {
     toDos.forEach((dat) => {
       const li = document.createElement("li");
       li.setAttribute(
@@ -20,8 +20,11 @@ function loader() {
 function handleClick() {
   const inp = document.getElementById("input").value;
 
-  inp !== "" ? toDos.unshift(inp) : "";
-  localStorage.setItem("data", toDos);
+  if (inp !== "") {
+    toDos.unshift(inp);
+    localStorage.setItem("data", toDos);
+  }
+
   //   toDos.forEach((dat) => {
   //     li.innerText = dat;
   //     oList.appendChild(li);
